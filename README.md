@@ -33,10 +33,13 @@ flowchart TD
         T_MGR <--> T_P1["Person 1"]
         T_MGR <--> T_P2["Person 2"]
         T_MGR <--> T_P3["Person 3"]
-        T_P1 <-.->|Endless Slack / Meetings| T_P2
-        T_P2 <-.->|Delayed Coordination| T_P3
+        T_P1 <-.->|Endless Meetings| T_P2
+        T_P2 <-.->|Delayed Pings| T_P3
     end
+```
 
+```mermaid
+flowchart TD
     subgraph PFC ["The PFC-Agent Star Topology (Direct & Zero-Distortion)"]
         direction TB
         P_CEO["CEO / Leadership"] <--> P_AGENT["PFC-Agent (Central Brain)"]
